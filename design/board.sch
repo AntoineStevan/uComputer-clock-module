@@ -13,17 +13,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 6650 3550 0    50   ~ 10
-Clock module\n
 Connection ~ 2600 1000
 Wire Wire Line
-	3200 1450 2900 1450
-Text Label 6600 3500 3    50   ~ 0
-GND
-Wire Wire Line
 	2600 1000 2600 1150
-Wire Wire Line
-	2200 1000 2600 1000
 Wire Wire Line
 	2200 1450 2200 1000
 Wire Wire Line
@@ -50,55 +42,105 @@ F 3 "~" H 2200 1700 50  0001 C CNN
 	1    2200 1700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x01_Female J1
-U 1 1 61A408F9
-P 2850 800
-F 0 "J1" H 2878 826 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 2878 735 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2850 800 50  0001 C CNN
-F 3 "~" H 2850 800 50  0001 C CNN
-	1    2850 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J2
-U 1 1 61A411EE
-P 2850 2050
-F 0 "J2" H 2878 2076 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 2878 1985 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2850 2050 50  0001 C CNN
-F 3 "~" H 2850 2050 50  0001 C CNN
-	1    2850 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Female J3
-U 1 1 61A414F2
-P 3400 1450
-F 0 "J3" H 3428 1476 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 3428 1385 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3400 1450 50  0001 C CNN
-F 3 "~" H 3400 1450 50  0001 C CNN
-	1    3400 1450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2200 1450 2200 1550
 Connection ~ 2200 1450
 Wire Wire Line
 	2200 1850 2200 1900
 Wire Wire Line
-	2200 1900 2600 1900
+	2200 1900 2300 1900
 Wire Wire Line
 	2600 1750 2600 1900
-Wire Wire Line
-	2600 800  2600 1000
-Wire Wire Line
-	2650 800  2600 800 
-Wire Wire Line
-	2600 1900 2600 2050
-Wire Wire Line
-	2600 2050 2650 2050
 Connection ~ 2600 1900
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 613636C9
+P 3400 1450
+F 0 "J1" H 3428 1476 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 3428 1385 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 3400 1450 50  0001 C CNN
+F 3 "~" H 3400 1450 50  0001 C CNN
+	1    3400 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1900 3150 1450
+Wire Wire Line
+	2600 1900 3150 1900
+Wire Wire Line
+	3100 1450 3100 1550
+Wire Wire Line
+	3100 1550 3200 1550
+Wire Wire Line
+	3100 1450 2900 1450
+Wire Wire Line
+	3150 1450 3200 1450
+Wire Wire Line
+	2600 1000 3150 1000
+Wire Wire Line
+	3150 1000 3150 1350
+Wire Wire Line
+	3150 1350 3200 1350
+$Comp
+L power:VCC #PWR0101
+U 1 1 6136569A
+P 2600 950
+F 0 "#PWR0101" H 2600 800 50  0001 C CNN
+F 1 "VCC" H 2617 1123 50  0000 C CNN
+F 2 "" H 2600 950 50  0001 C CNN
+F 3 "" H 2600 950 50  0001 C CNN
+	1    2600 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 950  2600 1000
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6136605C
+P 2300 950
+F 0 "#FLG0101" H 2300 1025 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 1123 50  0000 C CNN
+F 2 "" H 2300 950 50  0001 C CNN
+F 3 "~" H 2300 950 50  0001 C CNN
+	1    2300 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 61366B4C
+P 2600 1950
+F 0 "#PWR0102" H 2600 1700 50  0001 C CNN
+F 1 "GND" H 2605 1777 50  0000 C CNN
+F 2 "" H 2600 1950 50  0001 C CNN
+F 3 "" H 2600 1950 50  0001 C CNN
+	1    2600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 1950 2600 1900
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 61366F81
+P 2300 1950
+F 0 "#FLG0102" H 2300 2025 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 2123 50  0000 C CNN
+F 2 "" H 2300 1950 50  0001 C CNN
+F 3 "~" H 2300 1950 50  0001 C CNN
+	1    2300 1950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2300 1950 2300 1900
+Connection ~ 2300 1900
+Wire Wire Line
+	2300 1900 2600 1900
+Wire Wire Line
+	2300 1000 2600 1000
+Wire Wire Line
+	2300 1000 2300 950 
+Wire Wire Line
+	2300 1000 2200 1000
+Connection ~ 2300 1000
+Text Label 2950 1450 0    50   ~ 0
+CLK
 $EndSCHEMATC
